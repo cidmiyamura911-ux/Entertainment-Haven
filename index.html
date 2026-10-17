@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Entertainment Haven — When Music Meets Movies.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Cormorant+Garamond:wght@400;500;600&family=Oswald:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Cormorant+Garamond:wght@400;500;600&family=Oswald:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&family=IBM+Pl[...]
 <!-- corrected stylesheet path -->
 <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -152,7 +152,7 @@
     <div class="swatch"></div>
     <div>
       <h3>After Hours — songs to fade the credits into your own night</h3>
-      <p>Not a shuffle. Each track is tagged to the same six moods as the shelf above — Comfort, Chaos, Heartbreak, Wonder, Mystery, Intense — so whichever film you just watched hands off to a song built for the same feeling, instead of dropping you into something totally random.</p>
+      <p>Not a shuffle. Each track is tagged to the same six moods as the shelf above — Comfort, Chaos, Heartbreak, Wonder, Mystery, Intense — so whichever film you just watched hands off to [...]
     </div>
   </div>
 
@@ -261,10 +261,10 @@
 
 <!-- Background music: hidden, auto-loop, auto-start on first interaction -->
 <audio id="mainAudio" loop preload="auto">
-  <!-- Use URL-encoded relative path to the bundled MP3 (keep original filename) -->
-  <source src="./YUNDI%20plays%20Mozart_%20Piano%20Sonata%20No.%2011%20in%20A%20Major%2C%20K.%20331%20_Alla%20Turca__%20III.%20Rondo%20alla%20Turca%20%5Bn2Tru4Qa3pc%5D%20(1).mp3" type="audio/mpeg">
-  <!-- Fallback to GitHub Pages absolute URL (already encoded) -->
-  <source src="https://cidmiyamura911-ux.github.io/Entertainment-Haven/YUNDI%20plays%20Mozart_%20Piano%20Sonata%20No.%2011%20in%20A%20Major%2C%20K.%20331%20_Alla%20Turca__%20III.%20Rondo%20alla%20Turca%20%5Bn2Tru4Qa3pc%5D%20(1).mp3" type="audio/mpeg">
+  <!-- Prefer relative local file in audios/ -->
+  <source src="./audios/YUNDI%20plays%20Mozart_%20Piano%20Sonata%20No.%2011%20in%20A%20Major%2C%20K.%20331%20_Alla%20Turca__%20III.%20Rondo%20alla%20Turca%20%5Bn2Tru4Qa3pc%5D%20%281%29.mp3" type="audio/mpeg">
+  <!-- Fallback to GitHub Pages absolute URL -->
+  <source src="https://cidmiyamura911-ux.github.io/Entertainment-Haven/audios/YUNDI%20plays%20Mozart_%20Piano%20Sonata%20No.%2011%20in%20A%20Major%2C%20K.%20331%20_Alla%20Turca__%20III.%20Rondo%20alla%20Turca%20%5Bn2Tru4Qa3pc%5D%20%281%29.mp3" type="audio/mpeg">
 </audio>
 <audio id="queueAudio" preload="none"></audio>
 
