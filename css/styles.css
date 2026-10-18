@@ -750,6 +750,12 @@ section {
   border: 0;
 }
 
+#movieVideo[hidden],
+#movieNativeVideo[hidden],
+.movie-empty[hidden] {
+  display: none !important;
+}
+
 .movie-empty {
   position: absolute;
   inset: 0;
@@ -799,7 +805,7 @@ section {
 
 .playlist-intro {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto minmax(0, 1fr) minmax(200px, 356px);
   gap: 20px;
   align-items: center;
   margin-bottom: 22px;
@@ -807,6 +813,32 @@ section {
   background: var(--panel);
   border: 1px solid var(--hair);
   border-radius: 8px;
+}
+
+.queue-player-shell {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #000;
+}
+
+.queue-player {
+  width: 100%;
+  height: 200px;
+}
+
+.queue-player iframe {
+  display: block;
+  width: 100% !important;
+  height: 200px !important;
+  border: 0;
+}
+
+#queuePlayerStatus {
+  margin: 0;
+  padding: 8px 10px;
+  color: var(--muted);
+  font-size: 0.75rem;
 }
 
 .playlist-intro .swatch {
@@ -1381,6 +1413,10 @@ footer {
     gap: 12px;
     padding: 18px 16px;
     text-align: center;
+  }
+
+  .queue-player-shell {
+    width: min(100%, 356px);
   }
 
   .track-row {

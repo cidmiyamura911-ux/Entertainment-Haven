@@ -10,82 +10,82 @@ const MOODS = {
 };
 
 const TITLES = [
-  { t: 'Julie & Julia', mood: 'comfort', desc: 'Two women in different eras find purpose and connection through cooking.', len: '2h 03m' },
-  { t: 'Ratatouille', mood: 'comfort', desc: 'A rat with a remarkable sense of taste pursues his dream of becoming a chef in Paris.', len: '1h 51m' },
-  { t: 'The Intern', mood: 'comfort', desc: 'A retired widower becomes a senior intern at a fast-growing fashion company.', len: '2h 01m' },
-  { t: 'Little Miss Sunshine', mood: 'comfort', desc: 'A spirited family takes a cross-country road trip to support a young beauty-pageant contestant.', len: '1h 42m' },
-  { t: 'Crazy Rich Asians', mood: 'comfort', desc: 'A New Yorker travels to Singapore and discovers her boyfriend comes from an extraordinarily wealthy family.', len: '2h 01m' },
-  { t: 'Paddington 2', mood: 'comfort', desc: 'Paddington takes on a series of odd jobs to buy a special gift for his aunt.', len: '1h 43m' },
-  { t: 'Mad Max: Fury Road', mood: 'chaos', desc: 'A group of fugitives races across a harsh wasteland while pursued by a tyrant.', len: '2h 00m' },
-  { t: 'Baby Driver', mood: 'chaos', desc: 'A talented getaway driver tries to leave his criminal life behind.', len: '1h 53m' },
-  { t: 'Ocean\'s Eleven', mood: 'chaos', desc: 'A skilled crew plans an elaborate simultaneous heist of three Las Vegas casinos.', len: '1h 56m' },
-  { t: 'John Wick', mood: 'chaos', desc: 'A retired hitman returns to the underworld and sets off a relentless pursuit.', len: '1h 41m' },
-  { t: 'Game Night', mood: 'chaos', desc: 'A group of friends find their game night becoming a real-life mystery.', len: '1h 40m' },
-  { t: 'Guardians of the Galaxy', mood: 'chaos', desc: 'A band of unlikely outlaws joins forces to protect the galaxy.', len: '2h 01m' },
-  { t: 'The Notebook', mood: 'heartbreak', desc: 'A long love story unfolds through memories of a couple from different backgrounds.', len: '2h 03m' },
-  { t: 'La La Land', mood: 'heartbreak', desc: 'An aspiring actress and a jazz musician pursue their ambitions in Los Angeles.', len: '2h 09m' },
-  { t: 'Titanic', mood: 'heartbreak', desc: 'Two passengers from different worlds fall in love aboard the ill-fated ocean liner.', len: '3h 15m' },
-  { t: 'Eternal Sunshine of the Spotless Mind', mood: 'heartbreak', desc: 'A former couple undergoes a procedure to erase memories of their relationship.', len: '1h 48m' },
-  { t: 'Call Me by Your Name', mood: 'heartbreak', desc: 'A teenager in northern Italy experiences a formative summer romance.', len: '2h 12m' },
-  { t: 'A Walk to Remember', mood: 'heartbreak', desc: 'A rebellious teenager forms an unexpected bond with a kind-hearted classmate.', len: '1h 41m' },
-  { t: 'Spirited Away', mood: 'wonder', desc: 'A girl enters a world of spirits and works to free her transformed parents.', len: '2h 05m' },
-  { t: 'Harry Potter and the Sorcerer\'s Stone', mood: 'wonder', desc: 'A boy discovers he is a wizard and begins his education at Hogwarts.', len: '2h 32m' },
-  { t: 'Interstellar', mood: 'wonder', desc: 'Explorers travel beyond Earth in search of a future for humanity.', len: '2h 49m' },
-  { t: 'Coco', mood: 'wonder', desc: 'A young musician journeys to the Land of the Dead to learn about his family.', len: '1h 45m' },
-  { t: 'Pan\'s Labyrinth', mood: 'wonder', desc: 'A girl discovers a mysterious labyrinth and faces a series of fantastical tasks.', len: '1h 58m' },
-  { t: 'Life of Pi', mood: 'wonder', desc: 'A young man survives a shipwreck and an extraordinary journey across the ocean.', len: '2h 07m' },
-  { t: 'Knives Out', mood: 'mystery', desc: 'A detective investigates the death of a celebrated mystery novelist.', len: '2h 10m' },
-  { t: 'Shutter Island', mood: 'mystery', desc: 'A U.S. Marshal investigates the disappearance of a patient from a remote hospital.', len: '2h 18m' },
-  { t: 'Gone Girl', mood: 'mystery', desc: 'A husband becomes the focus of an investigation when his wife disappears.', len: '2h 29m' },
-  { t: 'Chinatown', mood: 'mystery', desc: 'A private investigator uncovers a tangled conspiracy while working in Los Angeles.', len: '2h 10m' },
-  { t: 'Se7en', mood: 'mystery', desc: 'Two detectives hunt a serial killer whose crimes follow a disturbing pattern.', len: '2h 07m' },
-  { t: 'The Prestige', mood: 'mystery', desc: 'Two rival magicians become consumed by competition and the secrets behind their illusions.', len: '2h 10m' },
-  { t: 'The Conjuring', mood: 'intense', desc: 'Paranormal investigators help a family troubled by a presence in their farmhouse.', len: '1h 52m' },
-  { t: 'Hereditary', mood: 'intense', desc: 'A family confronts unsettling secrets and increasingly frightening events after a loss.', len: '2h 07m' },
-  { t: 'A Quiet Place', mood: 'intense', desc: 'A family struggles to survive in a world where sound draws deadly creatures.', len: '1h 30m' },
-  { t: 'It', mood: 'intense', desc: 'A group of friends confronts a shape-shifting evil haunting their town.', len: '2h 15m' },
-  { t: 'Train to Busan', mood: 'intense', desc: 'Passengers fight to survive a fast-spreading outbreak aboard a train.', len: '1h 58m' },
-  { t: 'Get Out', mood: 'intense', desc: 'A weekend visit to meet a girlfriend\'s family turns into a chilling discovery.', len: '1h 44m' }
+  { t: 'Julie & Julia', mood: 'comfort', desc: 'Two women in different eras find purpose and connection through cooking.', len: '2h 03m', img: 'images/Julie & Julia.jpg', trailerSrc: 'https://www.youtube.com/embed/ozRK7VXQl-k' },
+  { t: 'Ratatouille', mood: 'comfort', desc: 'A rat with a remarkable sense of taste pursues his dream of becoming a chef in Paris.', len: '1h 51m', img: 'images/Ratatouille.jpg', trailerSrc: 'https://www.youtube.com/embed/PeFGdSrFTUw'},
+  { t: 'The Intern', mood: 'comfort', desc: 'A retired widower becomes a senior intern at a fast-growing fashion company.', len: '2h 01m', img: 'images/The Intern.jpg',trailerSrc: 'https://www.youtube.com/embed/ZU3Xban0Y6A'},
+  { t: 'Little Miss Sunshine', mood: 'comfort', desc: 'A spirited family takes a cross-country road trip to support a young beauty-pageant contestant.', len: '1h 42m', img: 'images/Little Miss Sunshine.jpg', trailerSrc: 'https://www.youtube.com/embed/wvwVkllXT80'},
+  { t: 'Crazy Rich Asians', mood: 'comfort', desc: 'A New Yorker travels to Singapore and discovers her boyfriend comes from an extraordinarily wealthy family.', len: '2h 01m', img: 'images/Crazy Rich Asians.jpg', trailerSrc: 'https://www.youtube.com/embed/14ZHRBfpeNg'},
+  { t: 'Paddington 2', mood: 'comfort', desc: 'Paddington takes on a series of odd jobs to buy a special gift for his aunt.', len: '1h 43m', img: 'images/Paddington 2.jpg', trailerSrc: 'https://www.youtube.com/embed/52x5HJ9H8DM'},
+  { t: 'Mad Max: Fury Road', mood: 'chaos', desc: 'A group of fugitives races across a harsh wasteland while pursued by a tyrant.', len: '2h 00m', img: 'images/Mad Max Fury Road.jpg' },
+  { t: 'Baby Driver', mood: 'chaos', desc: 'A talented getaway driver tries to leave his criminal life behind.', len: '1h 53m', img: 'images/Baby Driver.jpg' },
+  { t: 'Ocean\'s Eleven', mood: 'chaos', desc: 'A skilled crew plans an elaborate simultaneous heist of three Las Vegas casinos.', len: '1h 56m', img: 'images/Ocean\'s Eleven.jpg' },
+  { t: 'John Wick', mood: 'chaos', desc: 'A retired hitman returns to the underworld and sets off a relentless pursuit.', len: '1h 41m', img: 'images/John Wick.jpg' },
+  { t: 'Game Night', mood: 'chaos', desc: 'A group of friends find their game night becoming a real-life mystery.', len: '1h 40m', img: 'images/Game Night.jpg' },
+  { t: 'Guardians of the Galaxy', mood: 'chaos', desc: 'A band of unlikely outlaws joins forces to protect the galaxy.', len: '2h 01m', img: 'images/Guardians of the Galaxy.jpg' },
+  { t: 'The Notebook', mood: 'heartbreak', desc: 'A long love story unfolds through memories of a couple from different backgrounds.', len: '2h 03m', img: 'images/The Notebook.jpg' },
+  { t: 'La La Land', mood: 'heartbreak', desc: 'An aspiring actress and a jazz musician pursue their ambitions in Los Angeles.', len: '2h 09m', img: 'images/La La Land.jpg' },
+  { t: 'Titanic', mood: 'heartbreak', desc: 'Two passengers from different worlds fall in love aboard the ill-fated ocean liner.', len: '3h 15m', img: 'images/Titanic.jpg' },
+  { t: 'Eternal Sunshine of the Spotless Mind', mood: 'heartbreak', desc: 'A former couple undergoes a procedure to erase memories of their relationship.', len: '1h 48m', img: 'images/Eternal Sunshine of the Spotless Mind.jpg' },
+  { t: 'Call Me by Your Name', mood: 'heartbreak', desc: 'A teenager in northern Italy experiences a formative summer romance.', len: '2h 12m', img: 'images/Call Me by Your Name.jpg' },
+  { t: 'A Walk to Remember', mood: 'heartbreak', desc: 'A rebellious teenager forms an unexpected bond with a kind-hearted classmate.', len: '1h 41m', img: 'images/A Walk to Remember.jpg' },
+  { t: 'Spirited Away', mood: 'wonder', desc: 'A girl enters a world of spirits and works to free her transformed parents.', len: '2h 05m', img: 'images/Spirited Away.jpg' },
+  { t: 'Harry Potter and the Sorcerer\'s Stone', mood: 'wonder', desc: 'A boy discovers he is a wizard and begins his education at Hogwarts.', len: '2h 32m', img: 'images/Harry Potter and the Sorcerer\'s Stone.jpg' },
+  { t: 'Interstellar', mood: 'wonder', desc: 'Explorers travel beyond Earth in search of a future for humanity.', len: '2h 49m', img: 'images/Interstellar.jpg' },
+  { t: 'Coco', mood: 'wonder', desc: 'A young musician journeys to the Land of the Dead to learn about his family.', len: '1h 45m', img: 'images/Coco.jpg' },
+  { t: 'Pan\'s Labyrinth', mood: 'wonder', desc: 'A girl discovers a mysterious labyrinth and faces a series of fantastical tasks.', len: '1h 58m', img: 'images/Pan\'s Labyrinth.jpg' },
+  { t: 'Life of Pi', mood: 'wonder', desc: 'A young man survives a shipwreck and an extraordinary journey across the ocean.', len: '2h 07m', img: 'images/Life of Pi.jpg' },
+  { t: 'Knives Out', mood: 'mystery', desc: 'A detective investigates the death of a celebrated mystery novelist.', len: '2h 10m', img: 'images/Knives Out.jpg' },
+  { t: 'Shutter Island', mood: 'mystery', desc: 'A U.S. Marshal investigates the disappearance of a patient from a remote hospital.', len: '2h 18m', img: 'images/Shutter Island.jpg' },
+  { t: 'Gone Girl', mood: 'mystery', desc: 'A husband becomes the focus of an investigation when his wife disappears.', len: '2h 29m', img: 'images/Gone Girl.jpg' },
+  { t: 'Chinatown', mood: 'mystery', desc: 'A private investigator uncovers a tangled conspiracy while working in Los Angeles.', len: '2h 10m', img: 'images/Chinatown.jpg' },
+  { t: 'Se7en', mood: 'mystery', desc: 'Two detectives hunt a serial killer whose crimes follow a disturbing pattern.', len: '2h 07m', img: 'images/Se7en.jpg' },
+  { t: 'The Prestige', mood: 'mystery', desc: 'Two rival magicians become consumed by competition and the secrets behind their illusions.', len: '2h 10m', img: 'images/The Prestige.jpg' },
+  { t: 'The Conjuring', mood: 'intense', desc: 'Paranormal investigators help a family troubled by a presence in their farmhouse.', len: '1h 52m', img: 'images/The Conjuring.jpg' },
+  { t: 'Hereditary', mood: 'intense', desc: 'A family confronts unsettling secrets and increasingly frightening events after a loss.', len: '2h 07m', img: 'images/Hereditary.jpg' },
+  { t: 'A Quiet Place', mood: 'intense', desc: 'A family struggles to survive in a world where sound draws deadly creatures.', len: '1h 30m', img: 'images/A Quiet Place.jpg' },
+  { t: 'It', mood: 'intense', desc: 'A group of friends confronts a shape-shifting evil haunting their town.', len: '2h 15m', img: 'images/It.jpg' },
+  { t: 'Train to Busan', mood: 'intense', desc: 'Passengers fight to survive a fast-spreading outbreak aboard a train.', len: '1h 58m', img: 'images/Train to Busan.jpg' },
+  { t: 'Get Out', mood: 'intense', desc: 'A weekend visit to meet a girlfriend\'s family turns into a chilling discovery.', len: '1h 44m', img: 'images/Get Out.jpg' }
 ];
 
-// Add audioSrc: 'assets/audio/your-track.mp3' to a track when its file is available.
+// Add youtubeSrc with a YouTube embed URL to make a queue track playable.
 const TRACKS = [
-  { n: 'Better Together', a: 'Jack Johnson', mood: 'comfort', time: '3:27' },
-  { n: 'Banana Pancakes', a: 'Jack Johnson', mood: 'comfort', time: '3:11' },
-  { n: 'Sunday Morning', a: 'Maroon 5', mood: 'comfort', time: '4:04' },
-  { n: 'The Girl from Ipanema', a: 'Stan Getz & João Gilberto', mood: 'comfort', time: '5:24' },
-  { n: 'Put Your Records On', a: 'Corinne Bailey Rae', mood: 'comfort', time: '3:34' },
-  { n: 'Island in the Sun', a: 'Weezer', mood: 'comfort', time: '3:20' },
-  { n: 'Seven Nation Army', a: 'The White Stripes', mood: 'chaos', time: '3:52' },
-  { n: 'Till I Collapse', a: 'Eminem', mood: 'chaos', time: '4:58' },
-  { n: 'Blitzkrieg Bop', a: 'Ramones', mood: 'chaos', time: '2:12' },
-  { n: 'Titanium', a: 'David Guetta ft. Sia', mood: 'chaos', time: '4:05' },
-  { n: 'Sing, Sing, Sing', a: 'Benny Goodman', mood: 'chaos', time: '7:25' },
-  { n: 'Can\'t Hold Us', a: 'Macklemore & Ryan Lewis', mood: 'chaos', time: '4:18' },
-  { n: 'Someone Like You', a: 'Adele', mood: 'heartbreak', time: '4:45' },
-  { n: 'Back to December', a: 'Taylor Swift', mood: 'heartbreak', time: '4:53' },
-  { n: 'Skinny Love', a: 'Bon Iver', mood: 'heartbreak', time: '3:58' },
-  { n: 'All I Want', a: 'Kodaline', mood: 'heartbreak', time: '5:05' },
-  { n: 'Fix You', a: 'Coldplay', mood: 'heartbreak', time: '4:55' },
-  { n: 'Je te laisserai des mots', a: 'Patrick Watson', mood: 'heartbreak', time: '2:38' },
-  { n: 'Cornfield Chase (Interstellar)', a: 'Hans Zimmer', mood: 'wonder', time: '2:06' },
-  { n: 'Clair de Lune', a: 'Claude Debussy', mood: 'wonder', time: '~5:00' },
-  { n: 'Weightless', a: 'Marconi Union', mood: 'wonder', time: '8:00' },
-  { n: 'Dreams', a: 'Beach House', mood: 'wonder', time: '4:34' },
-  { n: 'Nightcall', a: 'Kavinsky', mood: 'wonder', time: '4:19' },
-  { n: 'Hedwig\'s Theme', a: 'John Williams', mood: 'wonder', time: '5:10' },
-  { n: 'Glory Box', a: 'Portishead', mood: 'mystery', time: '5:08' },
-  { n: 'Teardrop', a: 'Massive Attack', mood: 'mystery', time: '5:31' },
-  { n: 'Gymnopédie No. 1', a: 'Erik Satie', mood: 'mystery', time: '~3:00' },
-  { n: 'Oblivion', a: 'Grimes', mood: 'mystery', time: '4:12' },
-  { n: 'Angel', a: 'Massive Attack', mood: 'mystery', time: '6:18' },
-  { n: 'Harlem Nocturne', a: 'Earle Hagen', mood: 'mystery', time: '~2:45' },
-  { n: 'Tubular Bells (The Exorcist Theme)', a: 'Mike Oldfield', mood: 'intense', time: '26:03' },
-  { n: 'Halloween Theme', a: 'John Carpenter', mood: 'intense', time: '2:56' },
-  { n: 'Psycho: Prelude', a: 'Bernard Herrmann', mood: 'intense', time: '2:19' },
-  { n: 'Threnody for the Victims of Hiroshima', a: 'Krzysztof Penderecki', mood: 'intense', time: '9:35' },
-  { n: 'Dies Irae (Requiem)', a: 'Giuseppe Verdi', mood: 'intense', time: '~2:15' },
-  { n: 'The Haunting of Hill House Theme', a: 'The Newton Brothers', mood: 'intense', time: '2:18' }
+  { n: 'Better Together', a: 'Jack Johnson', mood: 'comfort', time: '3:27', youtubeSrc: 'https://www.youtube.com/embed/seZMOTGCDag' },
+  { n: 'Banana Pancakes', a: 'Jack Johnson', mood: 'comfort', time: '3:11', youtubeSrc: 'https://www.youtube.com/embed/OkyrIRyrRdY' },
+  { n: 'Sunday Morning', a: 'Maroon 5', mood: 'comfort', time: '4:04', youtubeSrc: 'https://www.youtube.com/embed/S2Cti12XBw4' },
+  { n: 'The Girl from Ipanema', a: 'Stan Getz & João Gilberto', mood: 'comfort', time: '5:24', youtubeSrc: 'https://www.youtube.com/embed/UJkxFhFRFDA' },
+  { n: 'Put Your Records On', a: 'Corinne Bailey Rae', mood: 'comfort', time: '3:34', youtubeSrc: 'https://www.youtube.com/embed/rjOhZZyn30k' },
+  { n: 'Island in the Sun', a: 'Weezer', mood: 'comfort', time: '3:20', youtubeSrc: 'https://www.youtube.com/embed/erG5rgNYSdk' },
+  { n: 'Seven Nation Army', a: 'The White Stripes', mood: 'chaos', time: '3:52', youtubeSrc: 'https://www.youtube.com/embed/0J2QdDbelmY' },
+  { n: 'Till I Collapse', a: 'Eminem', mood: 'chaos', time: '4:58', youtubeSrc: 'https://www.youtube.com/embed/ytQ5CYE1VZw' },
+  { n: 'Blitzkrieg Bop', a: 'Ramones', mood: 'chaos', time: '2:12', youtubeSrc: 'https://www.youtube.com/embed/skdE0KAFCEA' },
+  { n: 'Titanium', a: 'David Guetta ft. Sia', mood: 'chaos', time: '4:05', youtubeSrc: 'https://www.youtube.com/embed/JRfuAukYTKg' },
+  { n: 'Sing, Sing, Sing', a: 'Benny Goodman', mood: 'chaos', time: '7:25', youtubeSrc: 'https://www.youtube.com/embed/r2S1I_ien6A' },
+  { n: 'Can\'t Hold Us', a: 'Macklemore & Ryan Lewis', mood: 'chaos', time: '4:18', youtubeSrc: 'https://www.youtube.com/embed/2zNSgSzhBfM' },
+  { n: 'Someone Like You', a: 'Adele', mood: 'heartbreak', time: '4:45', youtubeSrc: 'https://www.youtube.com/embed/hLQl3WQQoQ0' },
+  { n: 'Back to December', a: 'Taylor Swift', mood: 'heartbreak', time: '4:53', youtubeSrc: 'https://www.youtube.com/embed/QUwxKWT6m7U' },
+  { n: 'Skinny Love', a: 'Bon Iver', mood: 'heartbreak', time: '3:58', youtubeSrc: 'https://www.youtube.com/embed/ssdgFoHLwnk' },
+  { n: 'All I Want', a: 'Kodaline', mood: 'heartbreak', time: '5:05', youtubeSrc: 'https://www.youtube.com/embed/mtf7hC17IBM' },
+  { n: 'Fix You', a: 'Coldplay', mood: 'heartbreak', time: '4:55', youtubeSrc: 'https://www.youtube.com/embed/k4V3Mo61fJM' },
+  { n: 'Je te laisserai des mots', a: 'Patrick Watson', mood: 'heartbreak', time: '2:38', youtubeSrc: 'https://www.youtube.com/embed/XEzGJijVx9o' },
+  { n: 'Cornfield Chase (Interstellar)', a: 'Hans Zimmer', mood: 'wonder', time: '2:06', youtubeSrc: 'https://www.youtube.com/embed/7GlsxNI4LVI' },
+  { n: 'Clair de Lune', a: 'Claude Debussy', mood: 'wonder', time: '~5:00', youtubeSrc: 'https://www.youtube.com/embed/CvFH_6DNRCY' },
+  { n: 'Weightless', a: 'Marconi Union', mood: 'wonder', time: '8:00', youtubeSrc: 'https://www.youtube.com/embed/UfcAVejslrU' },
+  { n: 'Dreams', a: 'Beach House', mood: 'wonder', time: '4:34', youtubeSrc: 'https://www.youtube.com/embed/OS6duOoxctw' },
+  { n: 'Nightcall', a: 'Kavinsky', mood: 'wonder', time: '4:19', youtubeSrc: 'https://www.youtube.com/embed/MV_3Dpw-BRY' },
+  { n: 'Hedwig\'s Theme', a: 'John Williams', mood: 'wonder', time: '5:10', youtubeSrc: 'https://www.youtube.com/embed/wtHra9tFISY' },
+  { n: 'Glory Box', a: 'Portishead', mood: 'mystery', time: '5:08', youtubeSrc: 'https://www.youtube.com/embed/4qQyUi4zfDs' },
+  { n: 'Teardrop', a: 'Massive Attack', mood: 'mystery', time: '5:31', youtubeSrc: 'https://www.youtube.com/embed/u7K72X4eo_s' },
+  { n: 'Gymnopédie No. 1', a: 'Erik Satie', mood: 'mystery', time: '~3:00', youtubeSrc: 'https://www.youtube.com/embed/S-Xm7s9eGxU' },
+  { n: 'Oblivion', a: 'Grimes', mood: 'mystery', time: '4:12', youtubeSrc: 'https://www.youtube.com/embed/JtH68PJIQLE' },
+  { n: 'Angel', a: 'Massive Attack', mood: 'mystery', time: '6:18', youtubeSrc: 'https://www.youtube.com/embed/hbe3CQamF8k' },
+  { n: 'Harlem Nocturne', a: 'Earle Hagen', mood: 'mystery', time: '~2:45', youtubeSrc: 'https://www.youtube.com/embed/N0gXlSBfnqo' },
+  { n: 'Tubular Bells (The Exorcist Theme)', a: 'Mike Oldfield', mood: 'intense', time: '26:03', youtubeSrc: 'https://www.youtube.com/embed/bv_4sZCLlr0' },
+  { n: 'Halloween Theme', a: 'John Carpenter', mood: 'intense', time: '2:56', youtubeSrc: 'https://www.youtube.com/embed/MriORvrRBc4' },
+  { n: 'Psycho: Prelude', a: 'Bernard Herrmann', mood: 'intense', time: '2:19', youtubeSrc: 'https://www.youtube.com/embed/Me-VhC9ieh0' },
+  { n: 'Threnody for the Victims of Hiroshima', a: 'Krzysztof Penderecki', mood: 'intense', time: '9:35', youtubeSrc: 'https://www.youtube.com/embed/Dp3BlFZWJNA' },
+  { n: 'Dies Irae (Requiem)', a: 'Giuseppe Verdi', mood: 'intense', time: '~2:15', youtubeSrc: 'https://www.youtube.com/embed/cHw4GER-MiE' },
+  { n: 'The Haunting of Hill House Theme', a: 'The Newton Brothers', mood: 'intense', time: '2:18', youtubeSrc: 'https://www.youtube.com/embed/kGS2g8BVOPM' }
 ];
 
 const q = (id) => document.getElementById(id);
@@ -170,6 +170,17 @@ function coverArt(mood, seed) {
   return `data:image/svg+xml,${encodeURIComponent(svg)}`;
 }
 
+function getPosterUrl(item) {
+  if (item && item.img) {
+    return encodeURI(item.img).replace(/'/g, '%27');
+  }
+  const cleanTitle = (item && item.t ? item.t : '').replace(/:/g, '');
+  if (cleanTitle) {
+    return encodeURI(`images/${cleanTitle}.jpg`).replace(/'/g, '%27');
+  }
+  return coverArt(item.mood, item.t);
+}
+
 function renderShelf() {
   const shelf = q('shelfRow');
 
@@ -181,7 +192,7 @@ function renderShelf() {
     card.tabIndex = 0;
     card.setAttribute('aria-label', `View ${item.t}`);
     card.innerHTML = `
-      <div class="poster" style="background-image:url('${coverArt(item.mood, item.t)}')">
+      <div class="poster" style="background-image:url('${getPosterUrl(item)}')">
         <span class="mood">${label}</span>
       </div>
       <div class="card-body">
@@ -259,9 +270,12 @@ function renderSuggestions(container, items, type) {
 let selectedMovie = null;
 
 function youtubeEmbedUrl(source) {
+  if (typeof source !== 'string') return null;
+  const match = source.match(/src=["']([^"']+)["']/i);
+  const cleanSource = match ? match[1] : source.trim();
   let url;
   try {
-    url = new URL(source);
+    url = new URL(cleanSource);
   } catch {
     return null;
   }
@@ -282,48 +296,186 @@ function youtubeEmbedUrl(source) {
 
   if (!videoId || !/^[\w-]{11}$/.test(videoId)) return null;
 
-  const embedUrl = new URL(`https://www.youtube.com/embed/${videoId}`);
-  for (const parameter of ['start', 'end', 'list', 'index', 'rel']) {
+  const embedUrl = new URL(`https://www.youtube-nocookie.com/embed/${videoId}`);
+  embedUrl.searchParams.set('rel', '0');
+  embedUrl.searchParams.set('enablejsapi', '1');
+  if (typeof window !== 'undefined' && window.location && window.location.origin && window.location.origin !== 'null' && !window.location.origin.startsWith('file')) {
+    embedUrl.searchParams.set('origin', window.location.origin);
+  }
+  for (const parameter of ['start', 'end', 'list', 'index']) {
     const value = url.searchParams.get(parameter);
     if (value) embedUrl.searchParams.set(parameter, value);
   }
-  return embedUrl.href;
+  return { url: embedUrl.href, id: videoId };
 }
 
 function updateMovieMedia(mode) {
   const tabs = [...document.querySelectorAll('.movie-tab')];
   tabs.forEach((tab) => tab.setAttribute('aria-selected', String(tab.dataset.mode === mode)));
 
-  const video = q('movieVideo');
+  const iframe = q('movieVideo');
+  const nativeVideo = q('movieNativeVideo');
   const source = selectedMovie[mode === 'trailer' ? 'trailerSrc' : 'movieSrc'];
-  const embedUrl = source ? youtubeEmbedUrl(source) : null;
+  const embedData = source ? youtubeEmbedUrl(source) : null;
+  const isDirectVideo = source && (/\.(mp4|webm|ogg)($|\?)/i.test(source) || (!embedData && typeof source === 'string' && source.length > 0 && !source.includes('youtube') && !source.includes('youtu.be')));
+  const hasPlayable = Boolean(embedData || isDirectVideo);
   const label = mode === 'trailer' ? 'Trailer' : 'Movie';
   const empty = q('movieEmpty');
+  const externalLink = q('movieExternalLink');
 
-  video.src = 'about:blank';
+  iframe.src = 'about:blank';
+  if (nativeVideo) {
+    nativeVideo.pause();
+    nativeVideo.removeAttribute('src');
+    nativeVideo.load();
+  }
 
   q('movieMedia').setAttribute('aria-labelledby', mode === 'trailer' ? 'trailerTab' : 'movieTab');
-  video.title = `${selectedMovie.t} ${label}`;
-  q('movieMediaTitle').textContent = embedUrl ? `${label} video` : `${label} unavailable`;
-  q('movieMediaMessage').textContent = source && !embedUrl
-    ? 'Use a valid YouTube video link for this slot.'
-    : embedUrl
-      ? ''
-      : `Add a YouTube ${label.toLowerCase()} link to this title to play it here.`;
+  iframe.title = `${selectedMovie.t} ${label}`;
+  q('movieMediaTitle').textContent = hasPlayable ? `${label} video` : `${label} unavailable`;
+  q('movieMediaMessage').textContent = hasPlayable
+    ? ''
+    : `Add a trailer or movie video to this title to play it here.`;
 
-  video.hidden = !embedUrl;
-  empty.hidden = Boolean(embedUrl);
-
-  if (embedUrl) {
-    video.src = embedUrl;
+  if (embedData) {
+    iframe.hidden = false;
+    iframe.style.display = 'block';
+    if (nativeVideo) {
+      nativeVideo.hidden = true;
+      nativeVideo.style.display = 'none';
+    }
+    empty.hidden = true;
+    empty.style.display = 'none';
+    iframe.src = embedData.url;
+  } else if (isDirectVideo) {
+    iframe.hidden = true;
+    iframe.style.display = 'none';
+    if (nativeVideo) {
+      nativeVideo.hidden = false;
+      nativeVideo.style.display = 'block';
+      nativeVideo.src = source;
+      nativeVideo.load();
+    }
+    empty.hidden = true;
+    empty.style.display = 'none';
   } else {
-    empty.style.backgroundImage = `url('${coverArt(selectedMovie.mood, selectedMovie.t)}')`;
+    iframe.hidden = true;
+    iframe.style.display = 'none';
+    if (nativeVideo) {
+      nativeVideo.hidden = true;
+      nativeVideo.style.display = 'none';
+    }
+    empty.hidden = false;
+    empty.style.display = 'grid';
+    empty.style.backgroundImage = `url('${getPosterUrl(selectedMovie)}')`;
+  }
+
+  if (externalLink) {
+    if (embedData && embedData.id) {
+      externalLink.href = `https://www.youtube.com/watch?v=${embedData.id}`;
+      externalLink.style.display = 'inline-flex';
+    } else {
+      externalLink.style.display = 'none';
+    }
   }
 }
 
 let backgroundWantsPlayback = false;
 let movieMediaActive = false;
 let queueWantsPlayback = false;
+let queueYoutubePlayer = null;
+let queueYoutubePlayerReady = false;
+let pendingQueueVideoId = null;
+
+function loadQueueYouTubeTrack(videoId) {
+  pendingQueueVideoId = videoId;
+  if (!queueYoutubePlayerReady) return;
+
+  pendingQueueVideoId = null;
+  queueYoutubePlayer.loadVideoById(videoId);
+}
+
+function initializeQueueYouTubePlayer() {
+  if (queueYoutubePlayer || !window.YT || !window.YT.Player) return;
+
+  const playerVars = {
+    controls: 1,
+    enablejsapi: 1,
+    playsinline: 1,
+    rel: 0
+  };
+  if (window.location.protocol === 'http:' || window.location.protocol === 'https:') {
+    playerVars.origin = window.location.origin;
+  }
+
+  queueYoutubePlayer = new window.YT.Player('queueYoutube', {
+    width: '356',
+    height: '200',
+    playerVars,
+    events: {
+      onReady(event) {
+        queueYoutubePlayerReady = true;
+        event.target.getIframe().title = 'Selected queue track YouTube player';
+        if (pendingQueueVideoId) {
+          const videoId = pendingQueueVideoId;
+          pendingQueueVideoId = null;
+          if (queueWantsPlayback) {
+            queueYoutubePlayer.loadVideoById(videoId);
+          } else {
+            queueYoutubePlayer.cueVideoById(videoId);
+          }
+        }
+      },
+      onStateChange(event) {
+        if (event.data === window.YT.PlayerState.PLAYING) {
+          queueWantsPlayback = true;
+          updateQueuePlayButton(true);
+        } else if (event.data === window.YT.PlayerState.PAUSED) {
+          queueWantsPlayback = false;
+          updateQueuePlayButton(false);
+          resumeBackgroundAudio();
+        } else if (event.data === window.YT.PlayerState.ENDED) {
+          queueWantsPlayback = false;
+          updateQueuePlayButton(false);
+          resumeBackgroundAudio();
+        }
+      },
+      onError(event) {
+        queueWantsPlayback = false;
+        q('queuePlayerStatus').textContent = `YouTube could not load this track (error ${event.data})`;
+        q('deckSub').textContent = 'This YouTube track could not be loaded';
+        updateQueuePlayButton(false);
+        resumeBackgroundAudio();
+      }
+    }
+  });
+}
+
+function loadQueueYouTubeAPI() {
+  window.onYouTubeIframeAPIReady = initializeQueueYouTubePlayer;
+  if (window.YT && window.YT.Player) {
+    initializeQueueYouTubePlayer();
+    return;
+  }
+
+  const script = document.createElement('script');
+  script.src = 'https://www.youtube.com/iframe_api';
+  script.async = true;
+  script.addEventListener('error', () => {
+    q('queuePlayerStatus').textContent = 'The YouTube player could not be loaded';
+    queueWantsPlayback = false;
+    updateQueuePlayButton(false);
+    resumeBackgroundAudio();
+  });
+  document.head.appendChild(script);
+}
+
+function updateQueuePlayButton(playing) {
+  const button = q('playToggle');
+  button.textContent = playing ? '❚❚' : '▶';
+  button.title = playing ? 'Pause selected track' : 'Play selected track';
+  button.setAttribute('aria-label', button.title);
+}
 
 function resumeBackgroundAudio() {
   if (backgroundWantsPlayback && !movieMediaActive) {
@@ -342,6 +494,7 @@ function setMovieMediaActive(active) {
   if (active) {
     queueWantsPlayback = false;
     queueAudio.pause();
+    if (queueYoutubePlayerReady) queueYoutubePlayer.pauseVideo();
     audio.pause();
   } else {
     resumeBackgroundAudio();
@@ -372,7 +525,22 @@ let currentIndex = -1;
 
 function togglePlay() {
   const queueAudio = q('queueAudio');
-  const audio = currentIndex >= 0 && TRACKS[currentIndex].audioSrc
+  const selectedTrack = currentIndex >= 0 ? TRACKS[currentIndex] : null;
+  if (selectedTrack && selectedTrack.youtubeSrc) {
+    if (queueWantsPlayback) {
+      queueWantsPlayback = false;
+      if (queueYoutubePlayerReady) queueYoutubePlayer.pauseVideo();
+      resumeBackgroundAudio();
+    } else {
+      backgroundWantsPlayback = true;
+      queueWantsPlayback = true;
+      q('mainAudio').pause();
+      if (queueYoutubePlayerReady) queueYoutubePlayer.playVideo();
+    }
+    return;
+  }
+
+  const audio = selectedTrack && selectedTrack.audioSrc
     ? queueAudio
     : q('mainAudio');
 
@@ -414,12 +582,43 @@ function playTrack(track, rowEl, fromTitle = '') {
   if (rowEl) rowEl.classList.add('playing');
 
   q('deckTitle').textContent = track.n;
+  const { color, label } = getMood(track.mood);
+  q('deckThumb').style.backgroundImage = `url('${coverArt(track.mood, track.n)}')`;
+  q('moodBadge').textContent = `MOOD: ${label.toUpperCase()}`;
+  q('scrubFill').style.background = color;
+
   const queueAudio = q('queueAudio');
   const backgroundAudio = q('mainAudio');
   queueAudio.pause();
 
+  const youtubeTrack = track.youtubeSrc ? youtubeEmbedUrl(track.youtubeSrc) : null;
+  if (youtubeTrack) {
+    if (movieMediaActive) {
+      q('movieVideo').src = 'about:blank';
+      q('movieDialog').close();
+      setMovieMediaActive(false);
+    }
+
+    backgroundWantsPlayback = true;
+    queueWantsPlayback = true;
+    backgroundAudio.pause();
+    queueAudio.removeAttribute('src');
+    if (queueYoutubePlayerReady) queueYoutubePlayer.stopVideo();
+    q('queuePlayerStatus').textContent = `Playing ${track.n}`;
+    q('deckSub').textContent = fromTitle ? `${track.a} · cued from "${fromTitle}"` : track.a;
+    loadQueueYouTubeTrack(youtubeTrack.id);
+  } else {
+    pendingQueueVideoId = null;
+    if (queueYoutubePlayerReady) queueYoutubePlayer.stopVideo();
+    q('queuePlayerStatus').textContent = track.youtubeSrc
+      ? 'The YouTube link for this track is invalid'
+      : 'Choose a track with a YouTube link to play it here.';
+  }
+
   const hasAudio = typeof track.audioSrc === 'string' && track.audioSrc.length > 0;
-  if (hasAudio) {
+  if (youtubeTrack) {
+    return;
+  } else if (hasAudio) {
     if (movieMediaActive) {
       q('movieVideo').src = 'about:blank';
       q('movieDialog').close();
@@ -441,14 +640,10 @@ function playTrack(track, rowEl, fromTitle = '') {
   } else {
     queueWantsPlayback = false;
     queueAudio.pause();
-    q('deckSub').textContent = 'Track audio not added yet';
+    q('deckSub').textContent = 'YouTube link not added for this track yet';
     resumeBackgroundAudio();
   }
 
-  const { color, label } = getMood(track.mood);
-  q('deckThumb').style.backgroundImage = `url('${coverArt(track.mood, track.n)}')`;
-  q('moodBadge').textContent = `MOOD: ${label.toUpperCase()}`;
-  q('scrubFill').style.background = color;
 }
 
 function prevTrack() {
@@ -555,6 +750,13 @@ function init() {
 
   q('movieClose').addEventListener('click', () => q('movieDialog').close());
   q('movieDialog').addEventListener('close', () => {
+    q('movieVideo').src = 'about:blank';
+    const nativeVideo = q('movieNativeVideo');
+    if (nativeVideo) {
+      nativeVideo.pause();
+      nativeVideo.removeAttribute('src');
+      nativeVideo.load();
+    }
     if (movieMediaActive) setMovieMediaActive(false);
   });
   q('movieDialog').addEventListener('click', (event) => {
@@ -647,6 +849,8 @@ function init() {
     document.addEventListener('click', startAudio);
     document.addEventListener('keydown', startAudio);
     document.addEventListener('touchstart', startAudio);
+    loadQueueYouTubeAPI();
+
   }
 
 }

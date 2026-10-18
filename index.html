@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Entertainment Haven — When Music Meets Movies.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Cormorant+Garamond:wght@400;500;600&family=Oswald:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -135,16 +136,22 @@
           id="movieVideo"
           src=""
           title="Trailer"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          frameborder="0"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
           hidden
         ></iframe>
+        <video id="movieNativeVideo" controls playsinline hidden style="width:100%; height:100%; object-fit:contain;"></video>
         <div class="movie-empty" id="movieEmpty">
           <strong id="movieMediaTitle">Trailer unavailable</strong>
           <p id="movieMediaMessage">Add a trailer video to the site to play it here.</p>
         </div>
       </div>
-      <p class="movie-meta">Choose a related film or track from the left.</p>
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:12px;">
+        <p class="movie-meta" style="margin:0;">Choose a related film or track from the left.</p>
+        <a id="movieExternalLink" class="btn btn-ghost" href="#" target="_blank" rel="noopener noreferrer" style="font-size:0.75rem; padding:6px 14px; text-decoration:none; display:none;">Watch on YouTube ↗</a>
+      </div>
     </section>
   </div>
 </dialog>
@@ -168,6 +175,10 @@
 =======
       <p>Not a shuffle. Each track is tagged to the same six moods as the shelf above — Comfort, Chaos, Heartbreak, Wonder, Mystery, Intense — so whichever film you just watched hands off to a song built for the same feeling, instead of dropping you into something totally random.</p>
 >>>>>>> 034ba75 (Initial commit)
+    </div>
+    <div class="queue-player-shell" style="display:none;">
+      <div class="queue-player" id="queueYoutube"></div>
+      <p id="queuePlayerStatus" aria-live="polite">Choose a track with a YouTube link to play it here.</p>
     </div>
   </div>
 
