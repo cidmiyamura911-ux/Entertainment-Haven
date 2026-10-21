@@ -10,49 +10,82 @@ const MOODS = {
 };
 
 const TITLES = [
-  { t: 'Low Tide Diner', y: '2021', mood: 'comfort', desc: 'A night-shift cook and a stranded traveler talk until sunrise.', len: '1h 42m', trailerSrc: 'https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0', movieSrc: '' },
-  { t: 'Static & Sons', y: '2019', mood: 'chaos', desc: 'Three brothers inherit a failing radio station and a lot of debt.', len: '1h 58m' },
-  { t: 'Paper Weather', y: '2023', mood: 'heartbreak', desc: 'A letter arrives eleven years late; a marriage reconsiders itself.', len: '2h 05m' },
-  { t: 'The Long Aquarium', y: '2020', mood: 'wonder', desc: 'A marine biologist finds something in the deep tank that shouldn\'t move.', len: '1h 36m' },
-  { t: 'Catch Me If You Can', y: '2002', mood: 'chaos', desc: 'A teenage con artist stays one step ahead of the agent chasing him.', len: '2h 21m' },
-  { t: 'The Fall', y: '2006', mood: 'wonder', desc: 'An injured stuntman spins a hospitalized girl an epic, hand-built fantasy.', len: '1h 57m' },
-  { t: 'Chef', y: '2014', mood: 'comfort', desc: 'A chef rebuilds his confidence and his family from a battered food truck.', len: '1h 55m' },
-  { t: 'Rooftop Static', y: '2022', mood: 'comfort', desc: 'A building super and a locked-out tenant wait out a blackout together.', len: '1h 29m' },
-  { t: 'Uncut Gems', y: '2019', mood: 'chaos', desc: 'A jeweler\'s one good bet spirals into a citywide chase for payback.', len: '2h 15m' },
-  { t: 'Wire & Static', y: '2018', mood: 'chaos', desc: 'A pirate radio crew stays a broadcast ahead of the signal trucks hunting them.', len: '1h 47m' },
-  { t: 'Eternal Sunshine of the Spotless Mind', y: '2004', mood: 'heartbreak', desc: 'A couple erases each other from memory, and slowly wants it back.', len: '1h 48m' },
-  { t: 'Harbor Letters', y: '2017', mood: 'heartbreak', desc: 'A lighthouse keeper answers mail addressed to a woman who left years ago.', len: '1h 39m' },
-  { t: 'Spirited Away', y: '2001', mood: 'wonder', desc: 'A girl works in a bathhouse for spirits to free her transformed parents.', len: '2h 05m' },
-  { t: 'The Glass Orchard', y: '2023', mood: 'wonder', desc: 'A gardener discovers her orchard\'s fruit holds other people\'s memories.', len: '1h 51m' },
-  { t: 'The Last Key', y: '2024', mood: 'mystery', desc: 'A night archivist finds a key that unlocks a room missing from the building plans.', len: '1h 46m' },
-  { t: 'The Vanishing Signal', y: '2021', mood: 'mystery', desc: 'A radio host follows a coded transmission that appears only during the midnight hour.', len: '1h 39m' },
-  { t: 'Redline', y: '2022', mood: 'intense', desc: 'A rescue driver races through a storm to reach a stranded mountain town.', len: '1h 54m' },
-  { t: 'Final Ascent', y: '2020', mood: 'intense', desc: 'A climber and her guide push through a whiteout with daylight and supplies running out.', len: '1h 48m' }
+  { t: 'Julie & Julia', mood: 'comfort', desc: 'Two women in different eras find purpose and connection through cooking.', len: '2h 03m' },
+  { t: 'Ratatouille', mood: 'comfort', desc: 'A rat with a remarkable sense of taste pursues his dream of becoming a chef in Paris.', len: '1h 51m' },
+  { t: 'The Intern', mood: 'comfort', desc: 'A retired widower becomes a senior intern at a fast-growing fashion company.', len: '2h 01m' },
+  { t: 'Little Miss Sunshine', mood: 'comfort', desc: 'A spirited family takes a cross-country road trip to support a young beauty-pageant contestant.', len: '1h 42m' },
+  { t: 'Crazy Rich Asians', mood: 'comfort', desc: 'A New Yorker travels to Singapore and discovers her boyfriend comes from an extraordinarily wealthy family.', len: '2h 01m' },
+  { t: 'Paddington 2', mood: 'comfort', desc: 'Paddington takes on a series of odd jobs to buy a special gift for his aunt.', len: '1h 43m' },
+  { t: 'Mad Max: Fury Road', mood: 'chaos', desc: 'A group of fugitives races across a harsh wasteland while pursued by a tyrant.', len: '2h 00m' },
+  { t: 'Baby Driver', mood: 'chaos', desc: 'A talented getaway driver tries to leave his criminal life behind.', len: '1h 53m' },
+  { t: 'Ocean\'s Eleven', mood: 'chaos', desc: 'A skilled crew plans an elaborate simultaneous heist of three Las Vegas casinos.', len: '1h 56m' },
+  { t: 'John Wick', mood: 'chaos', desc: 'A retired hitman returns to the underworld and sets off a relentless pursuit.', len: '1h 41m' },
+  { t: 'Game Night', mood: 'chaos', desc: 'A group of friends find their game night becoming a real-life mystery.', len: '1h 40m' },
+  { t: 'Guardians of the Galaxy', mood: 'chaos', desc: 'A band of unlikely outlaws joins forces to protect the galaxy.', len: '2h 01m' },
+  { t: 'The Notebook', mood: 'heartbreak', desc: 'A long love story unfolds through memories of a couple from different backgrounds.', len: '2h 03m' },
+  { t: 'La La Land', mood: 'heartbreak', desc: 'An aspiring actress and a jazz musician pursue their ambitions in Los Angeles.', len: '2h 09m' },
+  { t: 'Titanic', mood: 'heartbreak', desc: 'Two passengers from different worlds fall in love aboard the ill-fated ocean liner.', len: '3h 15m' },
+  { t: 'Eternal Sunshine of the Spotless Mind', mood: 'heartbreak', desc: 'A former couple undergoes a procedure to erase memories of their relationship.', len: '1h 48m' },
+  { t: 'Call Me by Your Name', mood: 'heartbreak', desc: 'A teenager in northern Italy experiences a formative summer romance.', len: '2h 12m' },
+  { t: 'A Walk to Remember', mood: 'heartbreak', desc: 'A rebellious teenager forms an unexpected bond with a kind-hearted classmate.', len: '1h 41m' },
+  { t: 'Spirited Away', mood: 'wonder', desc: 'A girl enters a world of spirits and works to free her transformed parents.', len: '2h 05m' },
+  { t: 'Harry Potter and the Sorcerer\'s Stone', mood: 'wonder', desc: 'A boy discovers he is a wizard and begins his education at Hogwarts.', len: '2h 32m' },
+  { t: 'Interstellar', mood: 'wonder', desc: 'Explorers travel beyond Earth in search of a future for humanity.', len: '2h 49m' },
+  { t: 'Coco', mood: 'wonder', desc: 'A young musician journeys to the Land of the Dead to learn about his family.', len: '1h 45m' },
+  { t: 'Pan\'s Labyrinth', mood: 'wonder', desc: 'A girl discovers a mysterious labyrinth and faces a series of fantastical tasks.', len: '1h 58m' },
+  { t: 'Life of Pi', mood: 'wonder', desc: 'A young man survives a shipwreck and an extraordinary journey across the ocean.', len: '2h 07m' },
+  { t: 'Knives Out', mood: 'mystery', desc: 'A detective investigates the death of a celebrated mystery novelist.', len: '2h 10m' },
+  { t: 'Shutter Island', mood: 'mystery', desc: 'A U.S. Marshal investigates the disappearance of a patient from a remote hospital.', len: '2h 18m' },
+  { t: 'Gone Girl', mood: 'mystery', desc: 'A husband becomes the focus of an investigation when his wife disappears.', len: '2h 29m' },
+  { t: 'Chinatown', mood: 'mystery', desc: 'A private investigator uncovers a tangled conspiracy while working in Los Angeles.', len: '2h 10m' },
+  { t: 'Se7en', mood: 'mystery', desc: 'Two detectives hunt a serial killer whose crimes follow a disturbing pattern.', len: '2h 07m' },
+  { t: 'The Prestige', mood: 'mystery', desc: 'Two rival magicians become consumed by competition and the secrets behind their illusions.', len: '2h 10m' },
+  { t: 'The Conjuring', mood: 'intense', desc: 'Paranormal investigators help a family troubled by a presence in their farmhouse.', len: '1h 52m' },
+  { t: 'Hereditary', mood: 'intense', desc: 'A family confronts unsettling secrets and increasingly frightening events after a loss.', len: '2h 07m' },
+  { t: 'A Quiet Place', mood: 'intense', desc: 'A family struggles to survive in a world where sound draws deadly creatures.', len: '1h 30m' },
+  { t: 'It', mood: 'intense', desc: 'A group of friends confronts a shape-shifting evil haunting their town.', len: '2h 15m' },
+  { t: 'Train to Busan', mood: 'intense', desc: 'Passengers fight to survive a fast-spreading outbreak aboard a train.', len: '1h 58m' },
+  { t: 'Get Out', mood: 'intense', desc: 'A weekend visit to meet a girlfriend\'s family turns into a chilling discovery.', len: '1h 44m' }
 ];
 
+// Add audioSrc: 'assets/audio/your-track.mp3' to a track when its file is available.
 const TRACKS = [
-  { n: 'Slow Burner Diner', a: 'Marigold Static', mood: 'comfort', time: '3:41' },
-  { n: 'Nightlight Economy', a: 'Feld & Rowe', mood: 'comfort', time: '4:02' },
-  { n: 'Broken Antenna', a: 'Static & Sons OST', mood: 'chaos', time: '2:58' },
-  { n: 'Wrong Frequency', a: 'Delia Vox', mood: 'chaos', time: '3:15' },
-  { n: 'Eleven Years Late', a: 'Corner Room', mood: 'heartbreak', time: '4:20' },
-  { n: 'Return to Sender', a: 'June Alder', mood: 'heartbreak', time: '3:33' },
-  { n: 'Something in the Tank', a: 'Marigold Static', mood: 'wonder', time: '5:01' },
-  { n: 'Deep End, Slowly', a: 'Halden Bay', mood: 'wonder', time: '4:47' },
-  { n: 'Come Fly With Me', a: 'Frank Sinatra', mood: 'chaos', time: '3:21' },
-  { n: 'Told As a Fable', a: 'Halden Bay', mood: 'wonder', time: '4:36' },
-  { n: 'Sunday Kitchen', a: 'Feld & Rowe', mood: 'comfort', time: '3:10' },
-  { n: 'Warm Static', a: 'Marigold Static', mood: 'comfort', time: '3:50' },
-  { n: 'Loose Wire', a: 'Delia Vox', mood: 'chaos', time: '3:05' },
-  { n: 'Sabotage', a: 'Beastie Boys', mood: 'chaos', time: '3:15' },
-  { n: 'The Scientist', a: 'Coldplay', mood: 'heartbreak', time: '4:09' },
-  { n: 'Corner Room Reprise', a: 'Corner Room', mood: 'heartbreak', time: '3:40' },
-  { n: 'Clair de Lune', a: 'Claude Debussy', mood: 'wonder', time: '4:30' },
-  { n: 'Glasshouse Bloom', a: 'Halden Bay', mood: 'wonder', time: '4:20' },
-  { n: 'The Unmarked Door', a: 'June Alder', mood: 'mystery', time: '3:52' },
-  { n: 'Archive at Midnight', a: 'Marigold Static', mood: 'mystery', time: '4:10' },
-  { n: 'Full Throttle', a: 'Delia Vox', mood: 'intense', time: '3:24' },
-  { n: 'After the Sirens', a: 'Feld & Rowe', mood: 'intense', time: '4:06' }
+  { n: 'Better Together', a: 'Jack Johnson', mood: 'comfort', time: '3:27' },
+  { n: 'Banana Pancakes', a: 'Jack Johnson', mood: 'comfort', time: '3:11' },
+  { n: 'Sunday Morning', a: 'Maroon 5', mood: 'comfort', time: '4:04' },
+  { n: 'The Girl from Ipanema', a: 'Stan Getz & João Gilberto', mood: 'comfort', time: '5:24' },
+  { n: 'Put Your Records On', a: 'Corinne Bailey Rae', mood: 'comfort', time: '3:34' },
+  { n: 'Island in the Sun', a: 'Weezer', mood: 'comfort', time: '3:20' },
+  { n: 'Seven Nation Army', a: 'The White Stripes', mood: 'chaos', time: '3:52' },
+  { n: 'Till I Collapse', a: 'Eminem', mood: 'chaos', time: '4:58' },
+  { n: 'Blitzkrieg Bop', a: 'Ramones', mood: 'chaos', time: '2:12' },
+  { n: 'Titanium', a: 'David Guetta ft. Sia', mood: 'chaos', time: '4:05' },
+  { n: 'Sing, Sing, Sing', a: 'Benny Goodman', mood: 'chaos', time: '7:25' },
+  { n: 'Can\'t Hold Us', a: 'Macklemore & Ryan Lewis', mood: 'chaos', time: '4:18' },
+  { n: 'Someone Like You', a: 'Adele', mood: 'heartbreak', time: '4:45' },
+  { n: 'Back to December', a: 'Taylor Swift', mood: 'heartbreak', time: '4:53' },
+  { n: 'Skinny Love', a: 'Bon Iver', mood: 'heartbreak', time: '3:58' },
+  { n: 'All I Want', a: 'Kodaline', mood: 'heartbreak', time: '5:05' },
+  { n: 'Fix You', a: 'Coldplay', mood: 'heartbreak', time: '4:55' },
+  { n: 'Je te laisserai des mots', a: 'Patrick Watson', mood: 'heartbreak', time: '2:38' },
+  { n: 'Cornfield Chase (Interstellar)', a: 'Hans Zimmer', mood: 'wonder', time: '2:06' },
+  { n: 'Clair de Lune', a: 'Claude Debussy', mood: 'wonder', time: '~5:00' },
+  { n: 'Weightless', a: 'Marconi Union', mood: 'wonder', time: '8:00' },
+  { n: 'Dreams', a: 'Beach House', mood: 'wonder', time: '4:34' },
+  { n: 'Nightcall', a: 'Kavinsky', mood: 'wonder', time: '4:19' },
+  { n: 'Hedwig\'s Theme', a: 'John Williams', mood: 'wonder', time: '5:10' },
+  { n: 'Glory Box', a: 'Portishead', mood: 'mystery', time: '5:08' },
+  { n: 'Teardrop', a: 'Massive Attack', mood: 'mystery', time: '5:31' },
+  { n: 'Gymnopédie No. 1', a: 'Erik Satie', mood: 'mystery', time: '~3:00' },
+  { n: 'Oblivion', a: 'Grimes', mood: 'mystery', time: '4:12' },
+  { n: 'Angel', a: 'Massive Attack', mood: 'mystery', time: '6:18' },
+  { n: 'Harlem Nocturne', a: 'Earle Hagen', mood: 'mystery', time: '~2:45' },
+  { n: 'Tubular Bells (The Exorcist Theme)', a: 'Mike Oldfield', mood: 'intense', time: '26:03' },
+  { n: 'Halloween Theme', a: 'John Carpenter', mood: 'intense', time: '2:56' },
+  { n: 'Psycho: Prelude', a: 'Bernard Herrmann', mood: 'intense', time: '2:19' },
+  { n: 'Threnody for the Victims of Hiroshima', a: 'Krzysztof Penderecki', mood: 'intense', time: '9:35' },
+  { n: 'Dies Irae (Requiem)', a: 'Giuseppe Verdi', mood: 'intense', time: '~2:15' },
+  { n: 'The Haunting of Hill House Theme', a: 'The Newton Brothers', mood: 'intense', time: '2:18' }
 ];
 
 const q = (id) => document.getElementById(id);
@@ -146,10 +179,10 @@ function renderShelf() {
     card.className = 'card';
     card.setAttribute('role', 'button');
     card.tabIndex = 0;
-    card.setAttribute('aria-label', `View ${item.t} (${item.y})`);
+    card.setAttribute('aria-label', `View ${item.t}`);
     card.innerHTML = `
       <div class="poster" style="background-image:url('${coverArt(item.mood, item.t)}')">
-        <span class="mood">${label} · ${item.y}</span>
+        <span class="mood">${label}</span>
       </div>
       <div class="card-body">
         <h3>${item.t}</h3>
@@ -207,7 +240,7 @@ function renderSuggestions(container, items, type) {
 
     if (type === 'movie') {
       title.textContent = item.t;
-      detail.textContent = `${item.y} · ${getMood(item.mood).label}`;
+      detail.textContent = `${getMood(item.mood).label} · ${item.len}`;
       button.addEventListener('click', () => showMovie(item));
     } else {
       title.textContent = item.n;
@@ -262,12 +295,12 @@ function updateMovieMedia(mode) {
   tabs.forEach((tab) => tab.setAttribute('aria-selected', String(tab.dataset.mode === mode)));
 
   const video = q('movieVideo');
-  video.src = 'about:blank';
-
   const source = selectedMovie[mode === 'trailer' ? 'trailerSrc' : 'movieSrc'];
   const embedUrl = source ? youtubeEmbedUrl(source) : null;
   const label = mode === 'trailer' ? 'Trailer' : 'Movie';
   const empty = q('movieEmpty');
+
+  video.src = 'about:blank';
 
   q('movieMedia').setAttribute('aria-labelledby', mode === 'trailer' ? 'trailerTab' : 'movieTab');
   video.title = `${selectedMovie.t} ${label}`;
@@ -288,11 +321,39 @@ function updateMovieMedia(mode) {
   }
 }
 
+let backgroundWantsPlayback = false;
+let movieMediaActive = false;
+let queueWantsPlayback = false;
+
+function resumeBackgroundAudio() {
+  if (backgroundWantsPlayback && !movieMediaActive) {
+    q('mainAudio').play().catch(() => {
+      q('deckSub').textContent = '';
+    });
+  }
+}
+
+function setMovieMediaActive(active) {
+  movieMediaActive = active;
+  const audio = q('mainAudio');
+  const queueAudio = q('queueAudio');
+  if (!audio) return;
+
+  if (active) {
+    queueWantsPlayback = false;
+    queueAudio.pause();
+    audio.pause();
+  } else {
+    resumeBackgroundAudio();
+  }
+}
+
 function showMovie(item) {
   selectedMovie = item;
+  setMovieMediaActive(true);
   q('movieTitle').textContent = item.t;
   q('movieMood').textContent = getMood(item.mood).label.toUpperCase();
-  q('movieYear').textContent = `${item.y} · ${item.len}`;
+  q('movieYear').textContent = item.len;
   q('movieDescription').textContent = item.desc;
 
   const sameMoodMovies = TITLES.filter((title) => title !== item && title.mood === item.mood).slice(0, 4);
@@ -307,12 +368,41 @@ function showMovie(item) {
   }
 }
 
-let playing = false;
 let currentIndex = -1;
 
 function togglePlay() {
-  playing = !playing;
-  q('playToggle').textContent = playing ? '❚❚' : '▶';
+  const queueAudio = q('queueAudio');
+  const audio = currentIndex >= 0 && TRACKS[currentIndex].audioSrc
+    ? queueAudio
+    : q('mainAudio');
+
+  if (audio.paused) {
+    if (audio === queueAudio) {
+      backgroundWantsPlayback = true;
+      queueWantsPlayback = true;
+      q('mainAudio').pause();
+    } else {
+      backgroundWantsPlayback = true;
+    }
+    audio.play().catch(() => {
+      q('deckSub').textContent = audio === queueAudio
+        ? 'This track could not be played'
+        : '';
+      if (audio === queueAudio) {
+        queueWantsPlayback = false;
+        resumeBackgroundAudio();
+      }
+    });
+    return;
+  }
+
+  if (audio === q('mainAudio')) {
+    backgroundWantsPlayback = false;
+  } else {
+    queueWantsPlayback = false;
+    resumeBackgroundAudio();
+  }
+  audio.pause();
 }
 
 function playTrack(track, rowEl, fromTitle = '') {
@@ -324,15 +414,41 @@ function playTrack(track, rowEl, fromTitle = '') {
   if (rowEl) rowEl.classList.add('playing');
 
   q('deckTitle').textContent = track.n;
-  q('deckSub').textContent = fromTitle ? `${track.a} · cued from "${fromTitle}"` : track.a;
+  const queueAudio = q('queueAudio');
+  const backgroundAudio = q('mainAudio');
+  queueAudio.pause();
+
+  const hasAudio = typeof track.audioSrc === 'string' && track.audioSrc.length > 0;
+  if (hasAudio) {
+    if (movieMediaActive) {
+      q('movieVideo').src = 'about:blank';
+      q('movieDialog').close();
+      setMovieMediaActive(false);
+    }
+
+    backgroundWantsPlayback = true;
+    queueWantsPlayback = true;
+    backgroundAudio.pause();
+    queueAudio.src = track.audioSrc;
+    q('deckSub').textContent = fromTitle ? `${track.a} · cued from "${fromTitle}"` : track.a;
+    if (!movieMediaActive) {
+      queueAudio.play().catch(() => {
+        queueWantsPlayback = false;
+        q('deckSub').textContent = 'This track could not be played';
+        resumeBackgroundAudio();
+      });
+    }
+  } else {
+    queueWantsPlayback = false;
+    queueAudio.pause();
+    q('deckSub').textContent = 'Track audio not added yet';
+    resumeBackgroundAudio();
+  }
 
   const { color, label } = getMood(track.mood);
   q('deckThumb').style.backgroundImage = `url('${coverArt(track.mood, track.n)}')`;
   q('moodBadge').textContent = `MOOD: ${label.toUpperCase()}`;
   q('scrubFill').style.background = color;
-
-  playing = true;
-  q('playToggle').textContent = '❚❚';
 }
 
 function prevTrack() {
@@ -438,6 +554,9 @@ function init() {
   });
 
   q('movieClose').addEventListener('click', () => q('movieDialog').close());
+  q('movieDialog').addEventListener('close', () => {
+    if (movieMediaActive) setMovieMediaActive(false);
+  });
   q('movieDialog').addEventListener('click', (event) => {
     if (event.target === q('movieDialog')) q('movieDialog').close();
   });
@@ -472,10 +591,54 @@ function init() {
   const audio = q('mainAudio');
   if (audio) {
     let started = false;
+    const button = q('playToggle');
+    audio.addEventListener('play', () => {
+      button.textContent = '❚❚';
+      button.title = 'Pause background music';
+      button.setAttribute('aria-label', 'Pause background music');
+    });
+    audio.addEventListener('pause', () => {
+      button.textContent = '▶';
+      button.title = 'Play background music';
+      button.setAttribute('aria-label', 'Play background music');
+    });
+    audio.addEventListener('error', () => {
+      q('deckSub').textContent = '';
+    });
+
+    const queueAudio = q('queueAudio');
+    queueAudio.addEventListener('play', () => {
+      button.textContent = '❚❚';
+      button.title = 'Pause selected track';
+      button.setAttribute('aria-label', 'Pause selected track');
+    });
+    queueAudio.addEventListener('pause', () => {
+      button.textContent = '▶';
+      button.title = 'Play selected track';
+      button.setAttribute('aria-label', 'Play selected track');
+    });
+    queueAudio.addEventListener('ended', () => {
+      queueWantsPlayback = false;
+      button.textContent = '▶';
+      button.title = 'Play selected track';
+      button.setAttribute('aria-label', 'Play selected track');
+      resumeBackgroundAudio();
+    });
+    queueAudio.addEventListener('error', () => {
+      queueWantsPlayback = false;
+      q('deckSub').textContent = 'This track could not be loaded';
+      resumeBackgroundAudio();
+    });
+
     const startAudio = () => {
       if (started) return;
       started = true;
-      audio.play().catch(() => {});
+      backgroundWantsPlayback = true;
+      if (!movieMediaActive && !queueWantsPlayback) {
+        audio.play().catch(() => {
+          q('deckSub').textContent = '';
+        });
+      }
       document.removeEventListener('click', startAudio);
       document.removeEventListener('keydown', startAudio);
       document.removeEventListener('touchstart', startAudio);
@@ -485,6 +648,7 @@ function init() {
     document.addEventListener('keydown', startAudio);
     document.addEventListener('touchstart', startAudio);
   }
+
 }
 
 document.addEventListener('DOMContentLoaded', init);
